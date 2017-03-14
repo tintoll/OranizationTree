@@ -1,0 +1,22 @@
+{
+  "name": "OranizationTree",
+  "version": "0.1.0",
+  "authors": [
+    "tintoll<belselios@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1",
+    "underscore": "^1.8.3",
+    "normalize-css": "normalize.css#^5.0.0",
+    "sinonjs": "^1.17.1"
+  }
+}
