@@ -18,7 +18,7 @@ naver.model.Organization = function (htDataSet) {
     this.nParentId = htDataSet.parentId;
     this.nDepth = htDataSet.depth;
 
-    this._aChildren = {};
+    this._aChildren = [];
 }
 
 naver.model.Organization.prototype = {
@@ -44,6 +44,22 @@ naver.model.Organization.prototype = {
      */
     hasChildren : function () {
         return this._aChildren.length > 0;
+    },
+
+    /**
+     * 최상위 조직인지 판단한다
+     * @returns {boolean}
+     */
+    isRoot : function () {
+        return this.nParentId === -1;
+    },
+
+    /**
+     * 하위 조직을 삭제한다
+     * @param oOrganization
+     */
+    removeChild : function (oOrganization) {
+        this._aChildren = _.without(this._aChildren, oOrganization);
     }
 
 }
