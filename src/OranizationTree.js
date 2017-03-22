@@ -13,10 +13,10 @@
  */
 var organizationTree = function (htOptions) {
     var oOrganizations = new naver.collection.Organization(htOptions.sApiUrl),
-        oOrganizationTree = new naver.view.OrganizationTree(htOptions.sSelector, oOrganizations);
+     oOrganizationTree = new naver.view.OrganizationTree(htOptions.sSelector, oOrganizations);
 
         if(htOptions.useContextMenu){
-            oOrganizationTreeContextMenu = new naver.view.OrganizationTreeContextmenu((oOrganizationTree))    ;
+             oOrganizationTreeContextMenu = new naver.view.OrganizationTreeContextmenu(oOrganizationTree);
         }
     return oOrganizationTree;
-}
+};
