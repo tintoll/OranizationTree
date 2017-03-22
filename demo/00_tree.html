@@ -23,7 +23,7 @@
 
 
         </div>
-        <div class="context_menu" style="top:265px;left:100px;">
+        <div class="context_menu" style="display: none;">
             <ul>
                 <li>
                     <button type="button" class="change"><span>이름바꾸기</span></button>
@@ -82,9 +82,15 @@
     <script src="../src/naver.model.Organization.js"></script>
     <script src="../src/naver.collection.Organization.js"></script>
     <script src="../src/naver.view.Organization.js"></script>
+    <script src="../src/naver.view.OrganizationTreeContextmenu.js"></script>
+    <script src="../src/OranizationTree.js"></script>
+
     <script>
-        var oOrganizations = new naver.collection.Organization('/api/organizations'),
-            oOrganizationTree = new naver.view.OrganizationTree('.snb_organization', oOrganizations);
+        var oOrganizationTree = organizationTree({
+            sApiUrl : '/api/organizations',
+            sSelector : '.snb_organization',
+            useContextMenu : true
+        });
     </script>
 
 
